@@ -1,1 +1,1 @@
-# Ly_CSCI2270_FiInalProject
+# Ly_CSCI2270_FinalProject
