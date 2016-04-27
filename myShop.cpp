@@ -32,7 +32,7 @@ MyShop::~MyShop()
 
 
 ///ADDs the initial nodes into the tree, we get the items from the text file/////////////////////
-void MyShop::addMovieNode(std::string title, int attribute, int cost, int quantity)
+void MyShop::addShopNode(std::string title, int attribute, int cost, int quantity)
 {
     ShopNode* tmp=root;
     ShopNode* parent=NULL;
@@ -155,7 +155,7 @@ void MyShop::sellItem(std::string title){
 
 
 ///Finds a specific item in the shop, giving details about it////////////////
-void MyShop::findMovie(std::string title)
+void MyShop::itemDescription(std::string title)
 {
     ShopNode* node=root;
     bool found;

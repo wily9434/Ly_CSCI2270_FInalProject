@@ -47,7 +47,7 @@ int main()
                 }
 
             }
-            shop.addMovieNode(title, attribute, cost, quantity);
+            shop.addShopNode(title, attribute, cost, quantity);
             index++;
         }
     }
@@ -191,7 +191,7 @@ int main()
                 string title;
                 cout<<"Enter item name for description:"<<endl;
                 getline(cin, title);
-                shop.findMovie(title);
+                shop.itemDescription(title);
                 break;
 
             }

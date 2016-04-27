@@ -61,11 +61,12 @@ class MyShop
         void printShopInventory();
         void printPlayerInventory();
         void sellItem(std::string itemName);
-        void addMovieNode(std::string title, int attribute, int cost, int quantity);
+        void addShopNode(std::string title, int attribute, int cost, int quantity);
         void addPlayerNode(std::string itemName, int itemAttribute, int itemCost, int itemQuantity);
-        void findMovie(std::string title);
+        void itemDescription(std::string title);
         void buyItem(std::string title, int itemAttribute, int itemCost, int itemQuantity);
         void addPlayerInventory(std::string itemName, int itemAttribute, int itemCost, int itemQuantity);
+
 
 
     protected:
