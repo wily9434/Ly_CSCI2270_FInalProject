@@ -1,0 +1,10 @@
+Noob Sword, 5, 5, 1
+Noob Helmet, 5, 5, 4
+Noob Chestplate, 10, 15, 8
+Noob Gloves, 7, 10, 3
+Noob Mace, 7, 7, 5
+Noob Hammer, 10, 15, 2
+Noob Belt, 3, 8, 4
+Cool Sword, 10, 20, 5
+Cool Helmet, 15, 30, 3
+Noob Ring, 3, 5, 6
