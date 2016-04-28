@@ -44,6 +44,7 @@ For example, type in 1 at the main menu, and a list should pop up.
 3.Cool Helmet x 3 (The (x integar) just means the quantity of that item the store has.)
 
 
+
 Then, after printing out the list put in (5) and type in the item you want to describe.
 
 For example, hit (5) at the main menu.
@@ -51,6 +52,7 @@ For example, hit (5) at the main menu.
 Enter item name for description:
 
 Cool Helmet
+
 
 
 Item Description
