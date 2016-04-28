@@ -13,6 +13,7 @@ Also you can sell items to the shop as well.
 
 #How to Run
 When you run the code, a menu should show up.
+
 1. Print shop inventory 
 
 2. Print player inventory 
@@ -26,20 +27,28 @@ When you run the code, a menu should show up.
 6. Quit
 
 
-Enter a number (1) and hit the enter button on your keyboard.
-to sell simply press (3), and type in the item you want to sell. ie Noob Sword.
+Enter a number, (1) and hit the enter button on your keyboard. To sell something, simply press (3), and type in the item you want to sell. ie Noob Sword.
+
 (I do recomend that you print out player's inventory to see what items you have to sell.)
+
 In order to buy an item is a little more complicated, you have to type in the item's name, attribute, cost, and quantity.
+
 (I recomend to first print out the Shop's inventory, find an item you want to buy, then hit (5) and get the item description of that item.)
+
 For example, type in 1 at the main menu, and a list should pop up.
+
 1.Noob Sword x 1
+
 2.Noob Helmet x 3
-3.Cool Helmet x 3
-(the (x integar) just means the quantity of that item the store has.)
+
+3.Cool Helmet x 3 (the (x integar) just means the quantity of that item the store has.)
 
 then after printing out the list put in (5) and type in the item you want to describe.
+
 For example, hit (5) at the main menu.
+
 Enter item name for description:
+
 Cool Helmet
 
 
