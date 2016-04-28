@@ -49,17 +49,24 @@ For example, hit (5) at the main menu.
 
 Enter item name for description:
 
+
 Cool Helmet
 
-
 Item Description
+
 Item: Cool Helmet
+
 Attribute: + 15
+
 Cost: 30 gp
+
 Quantity: 3
 
+
 Then at the main menu type in (3) to buy the item and type in the description like this.
+
 Cool Helmet, 15, 30, 1
+
 Tadaa! You have bought a Cool Helmet! 
 
 #Dependencies
