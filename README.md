@@ -14,11 +14,17 @@ Also you can sell items to the shop as well.
 #How to Run
 When you run the code, a menu should show up.
 1. Print shop inventory 
+
 2. Print player inventory 
+
 3. Buy item 
+
 4. Sell item  
+
 5. item Description 
-6. Quit 
+
+6. Quit
+
 
 Enter a number (1) and hit the enter button on your keyboard.
 to sell simply press (3), and type in the item you want to sell. ie Noob Sword.
