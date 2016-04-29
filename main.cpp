@@ -116,7 +116,8 @@ int main()
         "3. Buy an Item\n"
         "4. Sell an Item\n"
         "5. Item Description\n"
-        "6. Quit!"<<endl;
+        "6. Player's Current Balance\n"
+        "7. Quit!"<<endl;
 
         cin>>choice;
         cin.ignore(1000, '\n');
@@ -138,7 +139,7 @@ int main()
         case 3:
             {
                 string title;
-                cout<<"Enter item you wish to purchase: (item name, item attribute, item cost)"<<endl;
+                cout<<"Enter item you wish to purchase:\n(item name, item attribute, item cost, item quantity)\n(Cool Helmet, 15, 30, 1)"<<endl;
                 getline(cin, title);
                 int playerIndex=0;
                 int playerNumber=1;
@@ -196,6 +197,13 @@ int main()
 
             }
         case 6:
+            {
+
+                shop.printPlayerMoney();
+                break;
+
+            }
+        case 7:
             {
                 cout<<"Goodbye!"<<endl;
                 n++;

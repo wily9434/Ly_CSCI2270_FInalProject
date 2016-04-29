@@ -4,6 +4,8 @@
 
 using namespace std;
 
+int playerMoney = 1000;
+
 MyShop::MyShop()
 {
     //ctor
@@ -100,7 +102,7 @@ void MyShop::addPlayerNode(std::string itemName, int itemAttribute, int itemCost
 void MyShop::addPlayerInventory(std::string itemName, int itemAttribute, int itemCost, int itemQuantity){
 
         addPlayerNode(itemName, itemAttribute, itemCost, itemQuantity);
-        cout<< "Player has bought " << itemName << " for " << itemCost << " gp" <<endl;
+        cout<< "Player has bought " << itemQuantity << " " << itemName << " for " << itemCost*itemQuantity << " gp" <<endl;
 
 
 
@@ -134,15 +136,18 @@ void MyShop::sellItem(std::string title){
     {
         cout<< endl;
         cout<<node->title << " has been sold!"<<endl;
+        cout<< endl;
         node->quantity++;
         cout<<"==========="<<endl;
         cout<<"|Item info|"<<endl;
         cout<<"==========="<<endl;
-        cout<<"Item: "<<node->title<<endl;
-        cout<<"cost: "<<node->cost<<endl;
-        cout<<"Quantity: "<<node->quantity<<endl;
+        cout<<"Item Sold: "<<node->title<<endl;
+        cout<<"Cost: "<<node->cost<<endl;
+        cout<<"Quantity In Shop: "<<node->quantity<<endl;
         cout<<"==========="<<endl;
         cout<< endl;
+        removePlayerInventory(title);
+        addPlayerMoney(node->cost);
 
     }
     else if (found==false){
@@ -220,26 +225,35 @@ void MyShop::buyItem(std::string title, int itemAttribute, int itemCost, int ite
         }
 	}
 
-	if (found==true) //&& node->quantity!=0
+	if (found==true && node->quantity!=0)
     {
+        if(node->quantity >= itemQuantity){
         cout<< endl;
         cout<<node->title << " has been sold!"<<endl;
-        node->quantity--;
+        node->quantity -= itemQuantity;
         cout<<"==========="<<endl;
         cout<<"Item info"<<endl;
         cout<<"==========="<<endl;
         cout<<"Item: "<<node->title<<endl;
         cout<<"cost: "<<node->cost<<endl;
-        cout<<"Quantity: "<<node->quantity<<endl;
+        cout<<"Quantity in Shop: "<<node->quantity<<endl;
         cout<<"==========="<<endl;
         cout<< endl;
         addPlayerInventory(title, itemAttribute, itemCost, itemQuantity);
+        subtractPlayerMoney(node->cost);
+        }
+        else if(node->quantity < itemQuantity){
+            cout<< endl;
+            cout<< "Unfortunately the store does not carry " << itemQuantity << " " << title <<endl;
+            cout<< "Please try buying a lesser amount of " << title << endl;
+            cout<< endl;
+        }
     }
     else if (found==true && node->quantity==0)
     {
         cout<< endl;
         cout<< node->title<< " x 0" <<endl;
-        cout<< "Unfortunately We Are Out Of " << node->title <<endl;
+        cout<< "Unfortunately we are out of *" << node->title << "* "<<endl;
         cout<< endl;
     }
     else if (found==false){
@@ -304,6 +318,78 @@ void MyShop::printPlayerInventory(PlayerNode* node)
     cout<< "- " <<node->itemName<<" x "<<node->itemQuantity<<endl;
 }
 ///1///////////////////////////////////////////////////////////
+
+
+///Removes item from player inventory///////////////////////////////
+void MyShop::removePlayerInventory(std::string title)
+{
+
+    PlayerNode* node=playerRoot;
+    int found = 0;
+
+	while (node!=NULL)
+	{
+		if (node->itemName.compare(title)>0)
+			node=node->leftChild;
+		else if (node->itemName.compare(title)<0)
+			node=node->rightChild;
+		else if (node->itemName==title && node->itemQuantity == 0)
+        {
+            found = 1;
+            break;
+        }
+        else if(node->itemName==title && node->itemQuantity > 0)
+        {
+            found = 2;
+            break;
+        }
+        else if(node->itemName!=title){
+            found = 3;
+            break;
+        }
+	}
+	if (found==1)
+    {
+        cout<< endl;
+       cout<<"You do not have any *" << node->itemName << "* left in your inventory!" <<endl;
+       cout<< "Please try selling something else!" <<endl;
+       cout<< endl;
+    }
+    if (found == 2){
+        node->itemQuantity--;
+        cout<<"You have *" << node->itemQuantity << "* " << node->itemName << " left in your inventory!" <<endl;
+        cout<< endl;
+    }
+    if (found == 3){
+        cout<<"Item not found."<<endl;
+    }
+}
+///1////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///Prints Player's money!///////////////////////////
+void MyShop::printPlayerMoney(){
+    cout<< endl;
+    cout<< "Player's current amount: " << playerMoney << " gp"<<endl;
+    cout<< endl;
+}
+///1/////////////////////////////////////////
+
+
+///adds to player's money//////////////////////
+int MyShop::addPlayerMoney(int editMoney){
+    playerMoney += editMoney;
+    return playerMoney;
+}
+///1///////////////////////////////////////////
+
+///subtract player's money//////////////////////
+int MyShop::subtractPlayerMoney(int editMoney){
+
+    playerMoney -= editMoney;
+    return playerMoney;
+}
+///1///////////////////////////////////////////////
+
 
 
 

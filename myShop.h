@@ -66,6 +66,10 @@ class MyShop
         void itemDescription(std::string title);
         void buyItem(std::string title, int itemAttribute, int itemCost, int itemQuantity);
         void addPlayerInventory(std::string itemName, int itemAttribute, int itemCost, int itemQuantity);
+        void removePlayerInventory(std::string);
+        void printPlayerMoney();
+        int addPlayerMoney(int money);
+        int subtractPlayerMoney(int money);
 
 
 
@@ -76,9 +80,9 @@ class MyShop
         void printShopInventory(ShopNode* node);
         void printPlayerInventory(PlayerNode* node);
         ShopNode* search(std::string title);
-        //MovieNode* treeMinimum(MovieNode *node);
         ShopNode *root;
         PlayerNode *playerRoot;
+        //PlayerNode* shopMinimum(PlayerNode* node);
 };
 
 #endif // MOVIETREE_H
