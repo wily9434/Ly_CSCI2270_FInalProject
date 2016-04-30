@@ -83,8 +83,9 @@ I just use the VMWare that we use in class, along with Codeblocs
 Will Ly
 
 #Contributors
-None
+Cassandra Goodby
 
 #Open Issues/Bus
-Always open to suggestions
+When you sell an item as a player when sold the players inventory does not reflect the change or delete the players inventory.
+The other issue is that when you click Item Description it only shows item description for the Shops inventory and there is not an option to show the item description for the players inventory. 
 
