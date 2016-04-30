@@ -86,6 +86,7 @@ Will Ly
 Cassandra Goodby
 
 #Open Issues/Bus
-When you sell an item as a player when sold the players inventory does not reflect the change or delete the players inventory.
-The other issue is that when you click Item Description it only shows item description for the Shops inventory and there is not an option to show the item description for the players inventory. 
+When you sell an item as a player when sold the players inventory does not reflect the change or delete the players inventory -Fixed
+
+The other issue is that when you click Item Description it only shows item description for the Shops inventory and there is not an option to show the item description for the players inventory. -Intended, but will take into account (thanks!)
 
