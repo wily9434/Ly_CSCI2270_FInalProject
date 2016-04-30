@@ -1,0 +1,3 @@
+Noob Sword, 5, 5, 1
+Noob Helmet, 5, 5, 1
+Noob Ring, 3, 5, 1

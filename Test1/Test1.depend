@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1461870871 source:/home/user/Dropbox/CSCI2270/Test1/main.cpp
+	<iostream>
+	"myShop.h"
+	<fstream>
+	<sstream>
+
+1461870875 /home/user/Dropbox/CSCI2270/Test1/include/myShop.h
+	<iostream>
+
+1461870977 source:/home/user/Dropbox/CSCI2270/Test1/src/myShop.cpp
+	"myShop.h"
+	<sstream>
+
