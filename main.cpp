@@ -106,37 +106,43 @@ int main()
     newFile.close();
 
 
-    int n=0;
-    while (n==0)
+    string decision;
+    while (decision!="7")
     {
-        int choice;
+        string choice;
         cout<<"======Welcome to Adventurer's Shop======\n"
         "1. Print Shop's Inventory List\n"
         "2. Print Player Inventory List\n"
-        "3. Buy an Item\n"
+        "3. Item Description\n"
         "4. Sell an Item\n"
-        "5. Item Description\n"
+        "5. Buy an Item\n"
         "6. Player's Current Balance\n"
         "7. Quit!"<<endl;
+        getline(cin,decision);
+        if (decision != "1" && decision != "2" && decision != "3" && decision != "4"&& decision != "5"&& decision != "6"&& decision != "7") {
+            cout << "" << endl;
+            cout << "Please Select a number 1-7" << endl;
+            cout << "" << endl;
+        }
 
-        cin>>choice;
-        cin.ignore(1000, '\n');
 
-        switch (choice)
+        //cin.ignore(1000, '\n');
+
+       // switch (choice)
         {
-        case 1:
+        if(decision == "1")
             {
                 shop.printShopInventory();
-                break;
+                //break;
 
             }
-        case 2:
+        if(decision == "2")
             {
                 shop.printPlayerInventory();
-                break;
+                //break;
 
             }
-        case 3:
+        if(decision == "5")
             {
                 string title;
                 cout<<"Enter item you wish to purchase:\n(item name, item attribute, item cost, item quantity)\n(Cool Helmet, 15, 30, 1)"<<endl;
@@ -177,48 +183,44 @@ int main()
                 playerIndex++;
                 shop.buyItem(itemName, itemAttribute, itemCost, itemQuantity);
                 //shop.addPlayerInventory(title, itemAttribute, itemCost, itemQuantity);
-                break;
+                //break;
             }
-        case 4:
+        if(decision == "4")
             {
                 string title;
                 cout<<"Enter Item You Wish to Sell:"<<endl;
                 getline(cin, title);
                 shop.sellItem(title);
-                break;
+                //break;
             }
-        case 5:
+        if(decision == "3")
             {
-                string title;
+                string title1;
                 cout<<"Enter item name for description:"<<endl;
-                getline(cin, title);
-                shop.itemDescription(title);
-                break;
+                getline(cin, title1);
+                shop.itemDescription(title1);
+                cout<<"Enter item name for description:"<<endl;
+                //break;
 
             }
-        case 6:
+        if(decision == "6")
             {
 
                 shop.printPlayerMoney();
-                break;
+                //break;
 
             }
-        case 7:
+        if(decision == "7")
             {
                 cout<<"Goodbye!"<<endl;
-                n++;
-                return 0;
-                break;
+                //descision++;
+                //return 0;
+                //break;
 
             }
 
         }
 
     }
+   //return 0;
 }
-
-
-
-
-
-
